@@ -5,7 +5,7 @@ const Inert = require('inert');
 const Vision = require('vision');
 const HapiSwagger = require('hapi-swagger');
 const Pack = require('../package');
-
+// const HapiMongoose = require('hapi-mongoose');
 const db = require('./database').db;
 
 (async () => {
@@ -15,7 +15,11 @@ const db = require('./database').db;
                 title: 'Test API Documentation',
                 'version': Pack.version,
             },
-        };
+    };
+    const mongoOptions = {
+        promises: 'native',
+        uri: 'mongodb://csstattracker:Mr1aB-09d3U-@den1.mongo1.gear.host:27001/csstattracker'
+    };
 
     await server.register([
         Inert,
@@ -24,6 +28,10 @@ const db = require('./database').db;
             plugin: HapiSwagger,
             options: swaggerOptions
         }
+        // {
+        //     plugin: HapiMongoose,
+        //     options: mongoOptions
+        // }
     ]);
     try {
         await server.start();
