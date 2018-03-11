@@ -10,12 +10,12 @@ module.exports = [
     {
         method: 'GET',
         path: '/player/{id}',
-        options:{
+        options: {
             handler: PlayerController.get,
             description: 'Gets player',
             notes: 'Returns the player',
-            tags:['api', 'player'],
-            validate:{
+            tags: ['api', 'player'],
+            validate: {
                 params: Joi.object({
                     id: Joi.string().required().description('the player\'s id')
                 })
@@ -25,12 +25,12 @@ module.exports = [
     {
         method: 'POST',
         path: '/player',
-        options:{
+        options: {
             handler: PlayerController.create,
             description: 'Creates new player',
             notes: 'Creates a new player. If leagueId is passed it adds the player to the league',
             tags: ['api', 'player'],
-            validate:{
+            validate: {
                 payload: Joi.object({
                     firstName: Joi.string().required().description('player\'s first name'),
                     lastName: Joi.string().required().description('player\'s last name '),
@@ -43,12 +43,12 @@ module.exports = [
     {
         method: 'PUT',
         path: '/player/{id}',
-        options:{
-            handler : PlayerController.update,
+        options: {
+            handler: PlayerController.update,
             description: 'Update player information',
             notes: 'Updates email, first name and last name',
-            tags:['api', 'player'],
-            validate:{
+            tags: ['api', 'player'],
+            validate: {
                 payload: Joi.object({
                     firstName: Joi.string().required().description('player\'s first name'),
                     lastName: Joi.string().required().description('player\'s last name '),
@@ -134,6 +134,42 @@ module.exports = [
             validate: {
                 params: Joi.object({
                     id: Joi.string().required().description('the id of the league')
+                })
+            }
+        }
+    },
+    {
+        method: 'PUT',
+        path: '/addPlayer/{leagueId}',
+        options: {
+            handler: LeagueController.addplayer,
+            description: 'Add Player to league',
+            notes: 'Adds player to league',
+            tags: ['api', 'league'],
+            validate: {
+                params: Joi.object({
+                    leagueId: Joi.string().required().description('id of the league')
+                }),
+                payload: Joi.object({
+                    playerId: Joi.string().required().description('player id')
+                })
+            }
+        }
+    },
+    {
+        method: 'DELETE',
+        path: '/removePlayer/{leagueId}',
+        options: {
+            handler: LeagueController.removePlayer,
+            description: 'Remove player from league',
+            notes: 'Removes players from league',
+            tags: ['api', 'league'],
+            validate: {
+                params: Joi.object({
+                    leagueId: Joi.string().required().description('id of the league')
+                }),
+                payload: Joi.object({
+                    playerId: Joi.string().required().description('player id')
                 })
             }
         }

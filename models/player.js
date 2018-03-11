@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 var relationship = require("mongoose-relationship");
+const Schema = mongoose.Schema;
+
 
 
 var PlayerSchema = new Schema({
@@ -9,10 +10,7 @@ var PlayerSchema = new Schema({
     dateCreated: Date,
     email: String,
     password: String,
-    leagues: [{ type: Schema.Types.ObjectId, ref: 'League', childPath:'players' }]
+    leagues: [{ type: Schema.Types.ObjectId, ref: 'League'}]
 });
 
-PlayerSchema.plugin(relationship, {
-    relationshipPathName: 'leagues'
-});
 module.exports = mongoose.model('Player', PlayerSchema);
