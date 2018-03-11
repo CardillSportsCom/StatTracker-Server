@@ -22,7 +22,7 @@ exports.get = (request, h) => {
   if (!mongoose.Types.ObjectId.isValid(request.params.id)) {
     return { message: "League not found", league: null };
   }
-  return League.findById(request.params.id).exec().then((leagueObj) => {
+  return League.findById(request.params.id).populate('players').exec().then((leagueObj) => {
     return { message: "Got League", league: leagueObj };
   }).catch((err) => {
 
@@ -53,8 +53,49 @@ exports.delete = (request, h) => {
   if (!mongoose.Types.ObjectId.isValid(request.params.id)) {
     return { message: "League not found", league: null };
   }
-  return League.findById(request.params.id).remove().exec().then(data=>{
-    return {message: "Deleted League"};
+  return League.findById(request.params.id).remove().exec().then(data => {
+    return { message: "Deleted League" };
+  }).catch((err) => {
+
+    return { err: err };
+
+  });
+}
+exports.addplayer = (request, h) => {
+  if (!mongoose.Types.ObjectId.isValid(request.params.leagueId)) {
+    return { message: "League not found" };
+  }
+  if (!mongoose.Types.ObjectId.isValid(request.payload.playerId)) {
+    return { message: "Player not found" };
+  }
+  return League.findById(request.params.leagueId).then((league) => {
+    league.players.push(request.payload.playerId);
+    league.save();
+    return { message: "added player to league" }
+
+  }).catch((err) => {
+
+    return { err: err };
+
+  });
+}
+
+exports.removePlayer = (request, h) => {
+  if (!mongoose.Types.ObjectId.isValid(request.params.leagueId)) {
+    return { message: "League not found" };
+  }
+  if (!mongoose.Types.ObjectId.isValid(request.payload.playerId)) {
+    return { message: "Player not found" };
+  }
+  return League.findById(request.params.leagueId).then((league) => {
+    for (var i = league.players.length - 1; i >= 0; i--) {
+      if (league.players[i] == request.payload.playerId) {
+        league.players.splice(i, 1);
+      }
+    }
+    league.save();
+    return { message: "delete player to league" }
+
   }).catch((err) => {
 
     return { err: err };
