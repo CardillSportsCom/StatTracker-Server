@@ -9,7 +9,9 @@ const Pack = require('../package');
 const db = require('./database').db;
 
 (async () => {
-    const server = new Hapi.Server(~~process.env.PORT || 3000, '0.0.0.0');
+    var port = parseInt(process.env.PORT) || 3000;
+    const server = new Hapi.Server({port: port});
+    server.port = port;
     const swaggerOptions = {
         info: {
                 title: 'Test API Documentation',
