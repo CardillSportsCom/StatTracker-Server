@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --inspect bootstrap.js"
+    "start": "node bootstrap.js"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "hapi-swagger": "^9.1.1",
     "inert": "^5.1.0",
     "mongoose": "^5.0.6",
+    "mongoose-relationship": "^0.1.5",
     "vision": "^5.3.1"
   }
 }
