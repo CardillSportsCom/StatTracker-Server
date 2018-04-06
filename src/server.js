@@ -32,10 +32,6 @@ const db = require('./database').db;
             plugin: HapiSwagger,
             options: swaggerOptions
         }
-        // {
-        //     plugin: HapiMongoose,
-        //     options: mongoOptions
-        // }
     ]);
     try {
         await server.start();
