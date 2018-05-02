@@ -5,7 +5,6 @@ var TeamSchema = new Schema({
     name: String,
     players: [{type:String, ref: 'Player'}],
     league: {type:String, ref:'League'},
-    type: {type:String, ref:'TeamType'},
     dateCreated: Date
 });
 

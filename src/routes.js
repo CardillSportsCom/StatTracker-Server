@@ -2,9 +2,13 @@ import Hapi from 'hapi';
 var LeagueRoutes = require('../lib/league/routes.js');
 var PlayerRoutes = require('../lib/player/routes.js');
 var LeaguePlayerRoutes = require('../lib/leaguePlayer/routes.js');
+var LeagueTypeRoutes = require('../lib/leagueType/routes.js');
+var TeamTypeRoutes = require('../lib/teamType/routes.js');
+var StatRoutes = require('../lib/stat/routes.js');
 
 
-module.exports =[].concat(LeagueRoutes, PlayerRoutes, LeaguePlayerRoutes);
+
+module.exports =[].concat(LeagueRoutes, PlayerRoutes, LeaguePlayerRoutes, LeagueTypeRoutes, TeamTypeRoutes, StatRoutes);
 
 // module.exports = [
    

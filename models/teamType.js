@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 var TeamTypeSchema = new Schema({
     name: String,
-    isDisplay: boolean
+    isDisplay: Boolean
 });
 
 module.exports = mongoose.model('TeamType', TeamTypeSchema);
