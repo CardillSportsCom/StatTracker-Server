@@ -3,7 +3,8 @@ const Schema = mongoose.Schema;
 
 var LeagueSchema = new Schema({
     name: String,
-    dateCreated: Date
+    dateCreated: Date,
+    type: {type:String, ref:'LeagueType'},
 
 });
 
