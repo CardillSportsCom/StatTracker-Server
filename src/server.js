@@ -17,7 +17,7 @@ const db = require('./database').db;
                 title: 'Test API Documentation',
                 'version': Pack.version,
             },
-        // host:'api-cardillsports-st.herokuapp.com'
+         host:'api-cardillsports-st.herokuapp.com'
         
     };
     const mongoOptions = {
