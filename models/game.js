@@ -6,6 +6,7 @@ var GameSchema = new Schema({
     teamA: {type: Schema.Types.ObjectId, ref: 'Team'},
     teamB: {type: Schema.Types.ObjectId, ref: 'Team'},
     type: {type:String, ref:'TeamType'},
+    league: {type: Schema.Types.ObjectId, ref: 'League'},
     dateCreated: Date
 });
 
