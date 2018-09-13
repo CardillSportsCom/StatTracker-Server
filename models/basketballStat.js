@@ -6,6 +6,7 @@ var BasketBallStatSchema = new Schema({
     player: {type: Schema.Types.ObjectId, ref: 'Player'},
     team: {type: Schema.Types.ObjectId, ref: 'Team'},
     game: {type: Schema.Types.ObjectId, ref: 'Game'},
+    league: {type: Schema.Types.ObjectId, ref: 'League'},
     FGM: Number,
     FGA: Number,
     rebounds: Number,

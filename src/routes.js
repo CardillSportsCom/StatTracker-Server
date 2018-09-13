@@ -9,6 +9,8 @@ var PlayerStatRoutes = require('../lib/playerStat/routes.js');
 var GameStatRoutes = require('../lib/gameStat/routes.js');
 var GameRoutes = require('../lib/game/routes.js');
 var ScoreRoutes = require('../lib/score/routes.js');
+var LeagueStatRoutes = require('../lib/leagueStat/routes.js');
 
 
-module.exports =[].concat(LeagueRoutes, PlayerRoutes, GameRoutes, LeaguePlayerRoutes, LeagueTypeRoutes, TeamTypeRoutes, StatRoutes, PlayerStatRoutes, GameStatRoutes, ScoreRoutes);
+
+module.exports =[].concat(LeagueRoutes, PlayerRoutes, GameRoutes, LeaguePlayerRoutes, LeagueTypeRoutes, TeamTypeRoutes, StatRoutes, PlayerStatRoutes, GameStatRoutes, ScoreRoutes, LeagueStatRoutes);
