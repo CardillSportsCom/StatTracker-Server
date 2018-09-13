@@ -13,7 +13,7 @@ var BasketBallStatSchema = new Schema({
     steals: Number,
     blocks: Number,
     blocksAgainst : Number,
-    stealsAgains : Number,
+    stealsAgainst : Number,
     turnovers:Number,
     dateCreated: Date
 });
