@@ -12,6 +12,8 @@ var BasketBallStatSchema = new Schema({
     assists: Number,
     steals: Number,
     blocks: Number,
+    blocksAgainst : Number,
+    stealsAgains : Number,
     turnovers:Number,
     dateCreated: Date
 });
