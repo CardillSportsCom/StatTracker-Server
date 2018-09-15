@@ -5,7 +5,7 @@ var TeamSchema = new Schema({
     name: String,
     players: [{type:Schema.Types.ObjectId, ref: 'Player'}],
     substitutes: [{type:Schema.Types.ObjectId, ref: 'Player'}],
-    injuries: [Number],
+    injuries: [{type:Schema.Types.ObjectId, ref: 'Player'}],
     games: [{type:Schema.Types.ObjectId, ref: 'Game'}],
     dateCreated: Date
 });
