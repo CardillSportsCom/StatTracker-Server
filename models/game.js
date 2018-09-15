@@ -9,6 +9,8 @@ var GameSchema = new Schema({
     teamBScore: String,
     type: {type:String, ref:'TeamType'},
     league: {type: Schema.Types.ObjectId, ref: 'League'},
+    isOvertime: Boolean,
+    gameDuration: Number,
     dateCreated: Date
 });
 
