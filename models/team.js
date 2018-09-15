@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 var TeamSchema = new Schema({
     name: String,
     players: [{type:Schema.Types.ObjectId, ref: 'Player'}],
-    league: {type:String, ref:'League'},
+    substitutes: [{type:Schema.Types.ObjectId, ref: 'Player'}],
+    injuries: [Number],
     games: [{type:Schema.Types.ObjectId, ref: 'Game'}],
     dateCreated: Date
 });
