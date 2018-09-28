@@ -10,14 +10,26 @@ const db = require('./database').db;
 
 (async () => {
     var port = parseInt(process.env.PORT) || 3000;
-    const server = new Hapi.Server({port: port});
+    const server = new Hapi.Server(
+        {
+            port: port,
+            routes: 
+                { 
+                    cors: {
+                        origin: ["*"],
+                        headers: ["Accept", "Content-Type"],
+                        additionalHeaders: ["X-Requested-With"]
+                    }
+                }
+        }
+    );
     server.port = port;
     const swaggerOptions = {
         info: {
                 title: 'Test API Documentation',
                 'version': Pack.version,
             },
-          host:'api-cardillsports-st.herokuapp.com'
+           host:'api-cardillsports-st.herokuapp.com'
         
     };
     const mongoOptions = {
