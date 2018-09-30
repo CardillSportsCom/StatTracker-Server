@@ -35,6 +35,8 @@ const db = require('./database').db;
     const mongoOptions = {
         promises: 'native',
         uri: 'mongodb://csstattracker:Mr1aB-09d3U-@den1.mongo1.gear.host:27001/csstattracker'
+        // uri: 'mongodb://testcsstattracker:Yf70c43-w48-@den1.mongo1.gear.host:27001/testcstattracker'
+        
     };
 
     await server.register([
