@@ -1,0 +1,133 @@
+{ 
+    "_id" : ObjectId("5ba1ce0a3f59360004fc7b12"), 
+    "player" : ObjectId("5ba1ce0a3f59360004fc7b11"), 
+    "league" : ObjectId("5ac6aaefe8da8276a88ffc07"), 
+    "dateCreated" : ISODate("2018-09-19T04:18:18.587+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5ba1cf793f59360004fc7b14"), 
+    "player" : ObjectId("5ba1cf793f59360004fc7b13"), 
+    "league" : ObjectId("5ac6aaefe8da8276a88ffc07"), 
+    "dateCreated" : ISODate("2018-09-19T04:24:25.981+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5ba1cf923f59360004fc7b16"), 
+    "player" : ObjectId("5ba1cf923f59360004fc7b15"), 
+    "league" : ObjectId("5ac6aaefe8da8276a88ffc07"), 
+    "dateCreated" : ISODate("2018-09-19T04:24:50.485+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5ba1cfa23f59360004fc7b18"), 
+    "player" : ObjectId("5ba1cfa23f59360004fc7b17"), 
+    "league" : ObjectId("5ac6aaefe8da8276a88ffc07"), 
+    "dateCreated" : ISODate("2018-09-19T04:25:06.923+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5ba1cfb63f59360004fc7b1a"), 
+    "player" : ObjectId("5ba1cfb63f59360004fc7b19"), 
+    "league" : ObjectId("5ac6aaefe8da8276a88ffc07"), 
+    "dateCreated" : ISODate("2018-09-19T04:25:26.995+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5ba1cfcc3f59360004fc7b1c"), 
+    "player" : ObjectId("5ba1cfcb3f59360004fc7b1b"), 
+    "league" : ObjectId("5ac6aaefe8da8276a88ffc07"), 
+    "dateCreated" : ISODate("2018-09-19T04:25:48.139+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5ba1cfdd3f59360004fc7b1e"), 
+    "player" : ObjectId("5ba1cfdc3f59360004fc7b1d"), 
+    "league" : ObjectId("5ac6aaefe8da8276a88ffc07"), 
+    "dateCreated" : ISODate("2018-09-19T04:26:05.075+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5ba1d0023f59360004fc7b20"), 
+    "player" : ObjectId("5ba1d0023f59360004fc7b1f"), 
+    "league" : ObjectId("5ac6aaefe8da8276a88ffc07"), 
+    "dateCreated" : ISODate("2018-09-19T04:26:42.883+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5ba1d01f3f59360004fc7b22"), 
+    "player" : ObjectId("5ba1d01f3f59360004fc7b21"), 
+    "league" : ObjectId("5ac6aaefe8da8276a88ffc07"), 
+    "dateCreated" : ISODate("2018-09-19T04:27:11.353+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5ba1d0f83f59360004fc7b24"), 
+    "player" : ObjectId("5ba1d0f73f59360004fc7b23"), 
+    "league" : ObjectId("5ac6aaefe8da8276a88ffc07"), 
+    "dateCreated" : ISODate("2018-09-19T04:30:48.046+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5ba1d1103f59360004fc7b26"), 
+    "player" : ObjectId("5ba1d1103f59360004fc7b25"), 
+    "league" : ObjectId("5ac6aaefe8da8276a88ffc07"), 
+    "dateCreated" : ISODate("2018-09-19T04:31:12.775+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5ba1d12e3f59360004fc7b28"), 
+    "player" : ObjectId("5ba1d12d3f59360004fc7b27"), 
+    "league" : ObjectId("5ac6aaefe8da8276a88ffc07"), 
+    "dateCreated" : ISODate("2018-09-19T04:31:42.056+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5ba1d1483f59360004fc7b2a"), 
+    "player" : ObjectId("5ba1d1473f59360004fc7b29"), 
+    "league" : ObjectId("5ac6aaefe8da8276a88ffc07"), 
+    "dateCreated" : ISODate("2018-09-19T04:32:08.278+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5ba1d1573f59360004fc7b2c"), 
+    "player" : ObjectId("5ba1d1563f59360004fc7b2b"), 
+    "league" : ObjectId("5ac6aaefe8da8276a88ffc07"), 
+    "dateCreated" : ISODate("2018-09-19T04:32:23.259+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5ba1d16d3f59360004fc7b2e"), 
+    "player" : ObjectId("5ba1d16d3f59360004fc7b2d"), 
+    "league" : ObjectId("5ac6aaefe8da8276a88ffc07"), 
+    "dateCreated" : ISODate("2018-09-19T04:32:45.645+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5bac034d420e37000408a75c"), 
+    "player" : ObjectId("5bac034d420e37000408a75b"), 
+    "league" : ObjectId("5ac6aaefe8da8276a88ffc07"), 
+    "dateCreated" : ISODate("2018-09-26T22:08:13.460+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5bac0370420e37000408a75e"), 
+    "player" : ObjectId("5bac0370420e37000408a75d"), 
+    "league" : ObjectId("5ac6aaefe8da8276a88ffc07"), 
+    "dateCreated" : ISODate("2018-09-26T22:08:48.608+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5bac0399420e37000408a760"), 
+    "player" : ObjectId("5bac0399420e37000408a75f"), 
+    "league" : ObjectId("5ac6aaefe8da8276a88ffc07"), 
+    "dateCreated" : ISODate("2018-09-26T22:09:29.822+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5bac03cc420e37000408a766"), 
+    "player" : ObjectId("5bac03cc420e37000408a765"), 
+    "league" : ObjectId("5ac6aaefe8da8276a88ffc07"), 
+    "dateCreated" : ISODate("2018-09-26T22:10:20.935+0000"), 
+    "__v" : NumberInt(0)
+}
