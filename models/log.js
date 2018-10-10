@@ -4,7 +4,7 @@ var relationship = require("mongoose-relationship");
 
 var LogSchema = new Schema({
     dateCreated: Date,
-    data: String,
+    data: Object,
     type: String
 
 });
