@@ -1,0 +1,14 @@
+{ 
+    "_id" : ObjectId("5ac7e7549dea5e85a0fa66ef"), 
+    "name" : "test", 
+    "dateCreated" : ISODate("2018-04-06T21:32:04.813+0000"), 
+    "type" : ObjectId("5ac7e74c9acd8e7d202b26ae"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5ac6aaefe8da8276a88ffc07"), 
+    "name" : "Wednesday Pickups", 
+    "dateCreated" : ISODate("2018-04-05T23:02:07.942+0000"), 
+    "type" : ObjectId("5ac7e74c9acd8e7d202b26ae"), 
+    "__v" : NumberInt(0)
+}
