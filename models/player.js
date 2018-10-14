@@ -7,8 +7,8 @@ var PlayerSchema = new Schema({
     dateCreated: Date,
     email: {type: String, required:true, index: { unique: true }},
     password: String,
-    roles: String,
-    teams: [{ type: Schema.Types.ObjectId, ref: 'Team' }]
+    teams: [{ type: Schema.Types.ObjectId, ref: 'Team' }],
+    isAdmin: Boolean
 }, { toJSON: { virtuals: true } });
 
 PlayerSchema.virtual('teamPlayers',{
