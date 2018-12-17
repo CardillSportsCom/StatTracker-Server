@@ -20,8 +20,9 @@ const serviceAccount = require('./serviceAccount.json');
     const server = new Hapi.Server(
         {
             port: port,
-            routes: 
-                { 
+            //host: 'localhost',
+            routes:
+                {
                     cors: {
                         origin: ["*"],
                         headers: ["Accept", "Content-Type", "Authorization"],
@@ -47,16 +48,12 @@ const serviceAccount = require('./serviceAccount.json');
             // auth: 'jwt',
            host:'test-cardillsports-stattracker.herokuapp.com'
         //    host:'api-cardillsports-st.herokuapp.com'
-           
-        
     };
     const mongoOptions = {
         promises: 'native',
         // uri: 'mongodb://csstattracker:Mr1aB-09d3U-@den1.mongo1.gear.host:27001/csstattracker'
         uri: 'mongodb://testcsstattracker:Yf70c43-w48-@den1.mongo1.gear.host:27001/testcstattracker'
         // uri: 'mongodb://desktop-osq5g16:3000/hapijs-mongoose-restapi'
-        
-        
     };
 
     server.register(HapiJWT);
@@ -71,7 +68,7 @@ const serviceAccount = require('./serviceAccount.json');
     await server.register([
         Inert,
         Vision,
-                
+
         {
             plugin: HapiSwagger,
             options: swaggerOptions
@@ -91,5 +88,5 @@ const serviceAccount = require('./serviceAccount.json');
         credential: admin.credential.cert(serviceAccount),
         databaseURL: 'https://stat-tracker-1537117819639.firebaseio.com/'
     });
-  
+
 })();

@@ -5,6 +5,7 @@ var PlayerSchema = new Schema({
     firstName: String,
     lastName: String,
     dateCreated: Date,
+    imageUri: String,
     email: {type: String, required:true, index: { unique: true }},
     password: String,
     teams: [{ type: Schema.Types.ObjectId, ref: 'Team' }],
