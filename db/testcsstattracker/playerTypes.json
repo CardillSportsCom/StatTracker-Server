@@ -1,0 +1,2 @@
+{ "_id" : { "$oid" : "5c2687005b39f81fb8a4962f" }, "name" : "Regular" }
+{ "_id" : { "$oid" : "5c2687215b39f81fb8a49631" }, "name" : "Non-regular" }
