@@ -1,1 +1,9 @@
 # CardillStatTracker
+
+## Getting Started
+- `npm start`
+- Navigate to http://localhost:3000/documentation#!/ to see the swagger documentation
+- Use the POST /auth/local/ endpoint to get an API Key
+- Contact our team for valid credentials
+- Take the API_KEY returned in the initial request and paste it into the text box in the top right of the page and submit it
+- Now you are authenticated and should be able to make authenticated requests on your local sandbox
