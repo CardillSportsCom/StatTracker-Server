@@ -20,7 +20,7 @@ const serviceAccount = require('./serviceAccount.json');
     const server = new Hapi.Server(
         {
             port: port,
-            //host: 'localhost',
+            // host: 'localhost',
             routes:
                 {
                     cors: {
@@ -47,12 +47,12 @@ const serviceAccount = require('./serviceAccount.json');
             security: [{ 'jwt': [] }],
             // auth: 'jwt',
         //    host:'test-cardillsports-stattracker.herokuapp.com'
-        //    host:'api-cardillsports-st.herokuapp.com'
+           host:'api-cardillsports-st.herokuapp.com'
     };
     const mongoOptions = {
         promises: 'native',
         // uri: 'mongodb://csstattracker:Mr1aB-09d3U-@den1.mongo1.gear.host:27001/csstattracker'
-        uri: 'mongodb://testcsstattracker:Yf70c43-w48-@den1.mongo1.gear.host:27001/testcstattracker'
+        // uri: 'mongodb://testcsstattracker:Yf70c43-w48-@den1.mongo1.gear.host:27001/testcstattracker'
         // uri: 'mongodb+srv://cardill-sports:Cardillsports@cardill-sports-qg6aw.mongodb.net/testcsstattracker'
         // uri: 'mongodb://desktop-osq5g16:3000/hapijs-mongoose-restapi'
     };

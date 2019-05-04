@@ -6,4 +6,6 @@ var TeamTypeSchema = new Schema({
     isDisplay: Boolean
 });
 
+TeamTypeSchema.set('collection', 'teamTypes');
+
 module.exports = mongoose.model('TeamType', TeamTypeSchema);

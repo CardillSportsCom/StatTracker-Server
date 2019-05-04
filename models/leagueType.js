@@ -6,4 +6,7 @@ var LeagueTypeSchema = new Schema({
     isDisplay: Boolean
 });
 
+LeagueTypeSchema.set('collection', 'leagueTypes');
+
+
 module.exports = mongoose.model('LeagueType', LeagueTypeSchema);
