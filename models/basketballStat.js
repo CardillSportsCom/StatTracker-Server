@@ -9,6 +9,8 @@ var BasketBallStatSchema = new Schema({
     league: {type: Schema.Types.ObjectId, ref: 'League'},
     FGM: Number,
     FGA: Number,
+    threePointersMade: Number,
+    threePointersAttempted: Number,
     rebounds: Number,
     assists: Number,
     steals: Number,
