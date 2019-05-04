@@ -4,7 +4,8 @@ var Mongoose = require('mongoose');
 
 // Mongoose.connect('mongodb://csstattracker:Mr1aB-09d3U-@den1.mongo1.gear.host:27001/csstattracker');
 // Mongoose.connect('mongodb://testcstattracker:Yf70c43-w48-@den1.mongo1.gear.host:27001/testcstattracker');
-Mongoose.connect('mongodb+srv://cardill-sports:Cardillsports@cardill-sports-qg6aw.mongodb.net/', {dbName: 'testcsstattracker'});
+// Mongoose.connect('mongodb+srv://cardill-sports:Cardillsports@cardill-sports-qg6aw.mongodb.net/', {dbName: 'testcsstattracker'});
+Mongoose.connect('mongodb+srv://cardill-sports:Cardillsports@cardill-sports-qg6aw.mongodb.net/', {dbName: 'csstattracker'});
 
 
 var db = Mongoose.connection;
