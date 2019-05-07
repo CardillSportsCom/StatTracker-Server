@@ -19,7 +19,8 @@ var BasketBallStatSchema = new Schema({
     stealsAgainst : Number,
     turnovers:Number,
     dateCreated: Date,
-    isWin: Boolean
+    isWin: Boolean,
+    pointsScored: Number
 });
 
 module.exports = mongoose.model('BasketBallStat', BasketBallStatSchema);
