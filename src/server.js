@@ -28,6 +28,15 @@ const serviceAccount = require('./serviceAccount.json');
                         headers: ["Accept", "Content-Type", "Authorization"],
                         additionalHeaders: ["X-Requested-With"]
                     }
+                    // },
+                    // validate: {
+                    //     failAction: async (request, h, err) => {
+                    //         // During development, log and respond with the full error.
+                    //         console.error(err);
+                    //         throw err;
+                          
+                    //     }
+                    //   }
                 }
         }
     );
