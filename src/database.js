@@ -1,7 +1,8 @@
 var Mongoose = require('mongoose');
 
-Mongoose.connect('mongodb+srv://cardill-sports:Cardillsports@cardill-sports-qg6aw.mongodb.net/', {dbName: 'testcsstattracker'});
-// Mongoose.connect('mongodb+srv://cardill-sports:Cardillsports@cardill-sports-qg6aw.mongodb.net/', {dbName: 'csstattracker'});
+var clusterName = 'mongodb+srv://cardill-sports:Cardillsports@cardill-sports-qg6aw.mongodb.net/'
+Mongoose.connect(clusterName, {dbName: 'testcsstattracker'});
+// Mongoose.connect(clusterName, {dbName: 'csstattracker'});
 
 var db = Mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error'));
