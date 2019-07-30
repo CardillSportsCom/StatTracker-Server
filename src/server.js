@@ -20,6 +20,7 @@ const serviceAccount = require('./serviceAccount.json');
     const server = new Hapi.Server(
         {
             port: port,
+            // Uncomment this to do local development
             // host: 'localhost',
             routes:
                 {
@@ -53,16 +54,12 @@ const serviceAccount = require('./serviceAccount.json');
               }
             },
             security: [{ 'jwt': [] }],
-            // auth: 'jwt',
-           host:'test-cardillsports-stattracker.herokuapp.com'
-        //    host:'api-cardillsports-st.herokuapp.com'
+            // Comment this out for local development
+            host:'test-cardillsports-stattracker.herokuapp.com'
+            // host:'api-cardillsports-st.herokuapp.com'
     };
     const mongoOptions = {
         promises: 'native',
-        // uri: 'mongodb://csstattracker:Mr1aB-09d3U-@den1.mongo1.gear.host:27001/csstattracker'
-        // uri: 'mongodb://testcsstattracker:Yf70c43-w48-@den1.mongo1.gear.host:27001/testcstattracker'
-        // uri: 'mongodb+srv://cardill-sports:Cardillsports@cardill-sports-qg6aw.mongodb.net/testcsstattracker'
-        // uri: 'mongodb://desktop-osq5g16:3000/hapijs-mongoose-restapi'
     };
 
     server.register(HapiJWT);
@@ -83,7 +80,6 @@ const serviceAccount = require('./serviceAccount.json');
             options: swaggerOptions
         }
     ]);
-    // await server.auth.default('jwt');
 
     try {
         await server.start();
