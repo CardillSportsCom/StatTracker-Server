@@ -34,7 +34,6 @@ const serviceAccount = require('./serviceAccount.json');
                     //         // During development, log and respond with the full error.
                     //         console.error(err);
                     //         throw err;
-                          
                     //     }
                     //   }
                 }
