@@ -1,1 +1,0 @@
-{ "_id" : { "$oid" : "5bb15c65be2df207fc5a7221" }, "name" : "Test League", "dateCreated" : { "$date" : "2018-09-30T23:29:41.677+0000" }, "type" : null, "__v" : 0 }
