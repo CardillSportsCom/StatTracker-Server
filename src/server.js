@@ -41,16 +41,16 @@ const serviceAccount = require('./serviceAccount.json');
     );
     server.port = port;
     const swaggerOptions = {
-        info: {
+            info: {
                 title: 'Test API Documentation',
                 'version': Pack.version,
             },
             securityDefinitions: {
-            'jwt': {
-                'type': 'apiKey',
-                'name': 'Authorization',
-                'in': 'header'
-            }
+              'jwt': {
+                  'type': 'apiKey',
+                  'name': 'Authorization',
+                  'in': 'header'
+              }
             },
             security: [{ 'jwt': [] }],
             // auth: 'jwt',
