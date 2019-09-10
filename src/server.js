@@ -48,9 +48,9 @@ const serviceAccount = require('./serviceAccount.json');
             },
             securityDefinitions: {
               'jwt': {
-                  'type': 'apiKey',
-                  'name': 'Authorization',
-                  'in': 'header'
+                'type': 'apiKey',
+                'name': 'Authorization',
+                'in': 'header'
               }
             },
             security: [{ 'jwt': [] }],
