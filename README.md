@@ -1,4 +1,4 @@
-# CardillStatTracker
+# StatTracker-Server
 
 ## Getting Started
 - `npm start`
