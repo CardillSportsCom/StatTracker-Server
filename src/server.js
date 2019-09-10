@@ -55,8 +55,8 @@ const serviceAccount = require('./serviceAccount.json');
             },
             security: [{ 'jwt': [] }],
             // Comment this out for local development
-            host:'test-cardillsports-stattracker.herokuapp.com'
-            // host:'api-cardillsports-st.herokuapp.com'
+            // host:'test-cardillsports-stattracker.herokuapp.com'
+            host:'api-cardillsports-st.herokuapp.com'
     };
     const mongoOptions = {
         promises: 'native',
