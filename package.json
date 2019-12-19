@@ -11,22 +11,22 @@
   "license": "ISC",
   "dependencies": {
     "1.0.2": "^1.0.0",
-    "babel-core": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-preset-es2015": "^6.24.1",
     "bcryptjs": "^2.4.3",
-    "boom": "^7.2.0",
-    "firebase-admin": "^6.0.0",
-    "glob": "^7.1.3",
-    "hapi": "^17.2.0",
-    "hapi-auth-jwt2": "^8.1.0",
+    "boom": "^7.3.0",
+    "firebase-admin": "^6.5.1",
+    "glob": "^7.1.6",
+    "hapi": "^17.8.5",
+    "hapi-auth-jwt2": "^8.8.1",
     "hapi-mongoose": "^1.0.2",
-    "hapi-swagger": "^9.1.1",
-    "inert": "^5.1.0",
-    "moment": "^2.22.2",
+    "hapi-swagger": "^9.4.2",
+    "inert": "^5.1.3",
+    "moment": "^2.24.0",
     "mongodb": "^3.4.0",
     "mongoose": "^5.8.1",
     "mongoose-relationship": "^0.1.5",
     "underscore": "^1.9.1",
-    "vision": "^5.3.1"
+    "vision": "^5.4.4"
   }
 }
