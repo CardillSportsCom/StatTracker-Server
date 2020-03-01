@@ -55,6 +55,8 @@ const serviceAccount = require('./serviceAccount.json');
             },
             security: [{ 'jwt': [] }],
             // Comment this out for local development
+            // Not specifying the host will default to localhost
+
             // host:'test-cardillsports-stattracker.herokuapp.com'
             host:'api-cardillsports-st.herokuapp.com'
     };
