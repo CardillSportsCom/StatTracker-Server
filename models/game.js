@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-var relationship = require("mongoose-relationship");
 
 var GameSchema = new Schema({
     teamA: {type: Schema.Types.ObjectId, ref: 'Team'},

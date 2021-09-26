@@ -28,7 +28,6 @@
     "moment": "^2.29.1",
     "mongodb": "^4.1.2",
     "mongoose": "^6.0.7",
-    "mongoose-relationship": "^0.1.5",
     "underscore": "^1.13.1"
   }
 }
