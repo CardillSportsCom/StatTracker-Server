@@ -1,4 +1,4 @@
-import Hapi from 'hapi';
+const Hapi = require('@hapi/hapi');
 var LeagueRoutes = require('../lib/league/routes.js');
 var PlayerRoutes = require('../lib/player/routes.js');
 var LeaguePlayerRoutes = require('../lib/leaguePlayer/routes.js');
