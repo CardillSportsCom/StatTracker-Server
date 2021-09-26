@@ -21,7 +21,7 @@ const serviceAccount = require('./serviceAccount.json');
         {
             port: port,
             // Uncomment this to do local development
-            host: 'localhost',
+            // host: 'localhost',
             routes:
                 {
                     cors: {
