@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 var LeaguePlayerSchema = new Schema({
     player: {type: Schema.Types.ObjectId, ref: 'Player'},
     league: {type: Schema.Types.ObjectId, ref: 'League'},
-    playerType: {type:String, ref:'PlayerType'},
+    playerType: {type:Schema.Types.ObjectId, ref:'PlayerType'},
     dateCreated: Date
 });
 
