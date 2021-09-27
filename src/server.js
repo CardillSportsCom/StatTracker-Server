@@ -69,14 +69,15 @@ const serviceAccount = require('./serviceAccount.json');
         key:secret,
         validate: validate,
         verifyOptions: {
-        algorithms: ['HS256'],
-        error: validateError
+            algorithms: ['HS256'],
+            error: validateError
         }
     });
+    // server.auth.default('jwt');
+
     await server.register([
         Inert,
         Vision,
-
         {
             plugin: HapiSwagger,
             options: swaggerOptions
