@@ -16,7 +16,7 @@ var RegisterRoutes = require("../lib/register/routes.js");
 var LoginRoutes = require("../lib/login/routes.js");
 var LogRoutes = require("../lib/log/routes.js");
 var LeagueLeaders = require("../lib/leagueLeaders/routes.js");
-
+var SeasonRoutes = require("../lib/season/routes.js");
 
 module.exports = [].concat(
   LogRoutes,
@@ -35,5 +35,6 @@ module.exports = [].concat(
   GameStatRoutes,
   ScoreRoutes,
   LeagueStatRoutes,
-  LeagueLeaders
+  LeagueLeaders,
+  SeasonRoutes
 );
