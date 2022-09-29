@@ -27,7 +27,7 @@
     "joi": "^17.4.2",
     "moment": "^2.29.1",
     "mongodb": "^4.1.2",
-    "mongoose": "^6.0.7",
+    "mongoose": "^6.4.6",
     "underscore": "^1.13.1"
   }
 }
