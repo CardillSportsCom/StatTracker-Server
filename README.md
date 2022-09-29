@@ -1,4 +1,4 @@
-# StatTracker-Server
+# StatTracker-Server Nodejs
 
 ## Getting Started
 - `npm start`
