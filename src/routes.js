@@ -1,4 +1,4 @@
-const Hapi = require('@hapi/hapi');
+const Hapi = require("@hapi/hapi");
 var LeagueRoutes = require("../lib/league/routes.js");
 var PlayerRoutes = require("../lib/player/routes.js");
 var LeaguePlayerRoutes = require("../lib/leaguePlayer/routes.js");
@@ -19,7 +19,6 @@ var LogRoutes = require("../lib/log/routes.js");
 var LeagueLeaders = require("../lib/leagueLeaders/routes.js");
 var SeasonRoutes = require("../lib/season/routes.js");
 
-
 module.exports = [].concat(
   LogRoutes,
   LoginRoutes,
@@ -37,11 +36,6 @@ module.exports = [].concat(
   GameStatRoutes,
   ScoreRoutes,
   LeagueStatRoutes,
-<<<<<<< HEAD
-  LeagueLeaders,
-  SeasonRoutes
-=======
   SeasonStatRoutes,
   LeagueLeaders
->>>>>>> bb75217dafda8e031083d2ca8b8be22b1977700f
 );
