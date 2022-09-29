@@ -11,12 +11,16 @@ var GameStatRoutes = require("../lib/gameStat/routes.js");
 var GameRoutes = require("../lib/game/routes.js");
 var ScoreRoutes = require("../lib/score/routes.js");
 var LeagueStatRoutes = require("../lib/leagueStat/routes.js");
+var SeasonStatRoutes = require("../lib/seasonStat/routes.js");
 var TeamRoutes = require("../lib/team/routes.js");
 var RegisterRoutes = require("../lib/register/routes.js");
 var LoginRoutes = require("../lib/login/routes.js");
 var LogRoutes = require("../lib/log/routes.js");
 var LeagueLeaders = require("../lib/leagueLeaders/routes.js");
+<<<<<<< HEAD
 var SeasonRoutes = require("../lib/season/routes.js");
+=======
+>>>>>>> bb75217dafda8e031083d2ca8b8be22b1977700f
 
 module.exports = [].concat(
   LogRoutes,
@@ -35,6 +39,11 @@ module.exports = [].concat(
   GameStatRoutes,
   ScoreRoutes,
   LeagueStatRoutes,
+<<<<<<< HEAD
   LeagueLeaders,
   SeasonRoutes
+=======
+  SeasonStatRoutes,
+  LeagueLeaders
+>>>>>>> bb75217dafda8e031083d2ca8b8be22b1977700f
 );
