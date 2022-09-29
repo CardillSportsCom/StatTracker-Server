@@ -42,6 +42,7 @@ const serviceAccount = require('./serviceAccount.json');
     );
     server.port = port;
     const swaggerOptions = {
+        grouping: 'tags',
             info: {
                 title: 'Test API Documentation',
                 'version': Pack.version,
