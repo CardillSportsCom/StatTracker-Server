@@ -17,10 +17,8 @@ var RegisterRoutes = require("../lib/register/routes.js");
 var LoginRoutes = require("../lib/login/routes.js");
 var LogRoutes = require("../lib/log/routes.js");
 var LeagueLeaders = require("../lib/leagueLeaders/routes.js");
-<<<<<<< HEAD
 var SeasonRoutes = require("../lib/season/routes.js");
-=======
->>>>>>> bb75217dafda8e031083d2ca8b8be22b1977700f
+
 
 module.exports = [].concat(
   LogRoutes,
