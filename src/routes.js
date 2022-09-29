@@ -37,5 +37,6 @@ module.exports = [].concat(
   ScoreRoutes,
   LeagueStatRoutes,
   SeasonStatRoutes,
-  LeagueLeaders
+  LeagueLeaders,
+  SeasonRoutes
 );
