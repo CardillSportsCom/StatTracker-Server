@@ -1,6 +1,8 @@
 src/database.js
 src/serviceAccount.json
 
+.env
+
 .DS_STORE
 
 # Logs
