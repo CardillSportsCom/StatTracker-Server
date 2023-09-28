@@ -10,10 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "1.0.2": "^1.0.0",
     "@hapi/hapi": "^20.2.0",
     "@hapi/inert": "^6.0.4",
     "@hapi/vision": "^6.1.0",
+    "1.0.2": "^1.0.0",
     "babel-core": "^6.26.3",
     "babel-preset-es2015": "^6.24.1",
     "bcryptjs": "^2.4.3",
@@ -21,6 +21,7 @@
     "bson": "^4.5.2",
     "firebase-admin": "^9.11.1",
     "glob": "^7.2.0",
+    "google-auth-library": "^9.0.0",
     "hapi-auth-jwt2": "^10.2.0",
     "hapi-mongoose": "^2.0.0",
     "hapi-swagger": "^14.2.4",
@@ -29,5 +30,8 @@
     "mongodb": "^4.1.2",
     "mongoose": "^6.0.7",
     "underscore": "^1.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }
