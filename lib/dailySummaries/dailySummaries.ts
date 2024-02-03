@@ -173,7 +173,6 @@ type GameDay = {
           new: true,
         }
       ).exec();
-      console.log(summary.text);
 
       return {
         summary: summary.text,
