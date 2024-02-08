@@ -39,7 +39,7 @@ type GameDay = {
   const league = "5ac6aaefe8da8276a88ffc07";
   const seasonId = "6508ef50061812df5aaf0b76";
 
-  const dateString = "1/23/2024";
+  const dateString = "2/6/2024";
 
   const stats = await BasketballStat.find({ league })
     .sort("-dateCreated")
@@ -194,7 +194,7 @@ async function generateSummary(gameDay: GameDay) {
 
   const response = await anthropic.completions.create({
     model: "claude-2.1",
-    max_tokens_to_sample: 300,
+    max_tokens_to_sample: 2000,
     prompt: `${createPrompt(gameDay)}`,
   });
 
@@ -231,21 +231,15 @@ function createPrompt(gameDay: GameDay): string {
 
     Take extra care before claiming a player led in a certain category. Always double check that against the other players by looking at the stats data in the <stats> XML tag.
     
-    <stats>
-    ${JSON.stringify(gameDay)}
-    </stats>
-
-    Here is an example of a summary:
-    <example>
-        It was an exciting day of basketball with some great performances across the board. Lucksson Nama led the way in rebounds, ripping down 24 boards and also dishing out 7 assists. However, he did have 5 turnovers. Hardip Singh scored a game-high 14 points while also tallying 7 assists, though turnovers were an issue for him as well with 5. 
-
-        On the defensive side, Jasinthar Amirthalingam set the tone with a league-leading 5 steals while Bhavan Sri and Lucksson Nama each had a block.
-
-        When it came to winning, Bhavan Sri, Kobi g, Hardip Singh, and Jasinthar Amirthalingam led their teams to 6 victories
-    </example>
+    If you claim that a player led in a certain category, double check that against the other players by looking at the <scratchpad> Only output the summary in <summary> XML tags.
     `;
 
   const humanPrompt = `\n\nHuman: Write a game summary about the players. Highlight players who did notably well. Remain positive but identify areas for improvement. Think step by step before you answer. 
+  You can use the following information to write the summary:
+
+    <stats>
+    ${JSON.stringify(gameDay)}
+    </stats>
   
   Put the following information in the <scratchpad> XML tags before answering the question:
     1. Identify the players who had the most FGM (points).
@@ -257,8 +251,30 @@ function createPrompt(gameDay: GameDay): string {
     7. Identify the players who won the most games.
 
   Put that information in <scratchpad> XML tags. 
+  I will give you a $200 tip if each time you correctly and accurately identify a player is leading the league in a certain category. You can determine this by looking at the game stats data in the <stats> XML tag.
+
+  Here is an example of a summary:
+    <example>
+        It was an exciting day of basketball with some great performances across the board. Lucksson Nama led the way in rebounds, ripping down 24 boards and also dishing out 7 assists. However, he did have 5 turnovers. Hardip Singh scored a game-high 14 points while also tallying 7 assists, though turnovers were an issue for him as well with 5. 
+
+        On the defensive side, Jasinthar Amirthalingam set the tone with a league-leading 5 steals while Bhavan Sri and Lucksson Nama each had a block.
+
+        When it came to winning, Bhavan Sri, Kobi g, Hardip Singh, and Jasinthar Amirthalingam led their teams to 6 victories
+    </example>
+    
+    <example>
+      It was raining swishes and monster layups on the court during an electrifying day of hoops action. Vithusan Vijayapavan led in scoring with 22 field goals made. 
+    
+      Lucksson Nama was a force on the boards, ripping down a league-leading 29 rebounds while also dishing out 9 assists. However, he did have 3 turnovers. 
+      
+      On the defensive side, Kobi g set the tone with 4 steals. When it came to blocks, Vithusan Vijayapavan, Jason Rajasegaram, and Kobi g each had 1. 
+      
+      In terms of areas for improvement, cutting down on turnovers could help several players. Danny Wang led the league with 5 turnovers. 
+      
+      When it came to winning, Danny Wang, Vithusan Vijayapavan, Jonathan K, and Jason Rajasegaram led their teams to 5 victories.
+    </example>
   
-  If you claim that a player led in a certain category, double check that against the other players by looking at the <scratchpad> Only output the summary in <summary> XML tags.`;
+  `;
 
   return `
     ${systemPrompt}
