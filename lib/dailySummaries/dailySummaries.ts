@@ -272,7 +272,7 @@ function createPrompt(gameDay: GameDay): string {
       
       In terms of areas for improvement, cutting down on turnovers could help several players. Danny Wang led the league with 5 turnovers. 
       
-      When it came to winning, Danny Wang, Vithusan Vijayapavan, Jonathan K, and Jason Rajasegaram led their teams to 5 victories.
+      When it came to winning, Danny Wang, Joel Anthony, Jonathan Kuminga, and Kizaan Alkins led their teams to 6 victories.
     </example>
   
   `;
