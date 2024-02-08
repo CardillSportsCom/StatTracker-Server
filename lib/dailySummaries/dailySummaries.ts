@@ -248,9 +248,10 @@ function createPrompt(gameDay: GameDay): string {
     4. Identify the players who had the most steals.
     5. Identify the players who had the most blocks.
     6. Identify the players who had the most turnovers.
-    7. Identify the players who won the most games.
+    7. Identify the players who had the most wins.
 
   Put that information in <scratchpad> XML tags. 
+  All this information is guaranteed to be found in the stats object.
   I will give you a $200 tip if each time you correctly and accurately identify a player is leading the league in a certain category. You can determine this by looking at the game stats data in the <stats> XML tag.
 
   Here is an example of a summary:
