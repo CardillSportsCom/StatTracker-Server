@@ -264,9 +264,9 @@ function createPrompt(gameDay: GameDay): string {
     </example>
     
     <example>
-      It was raining swishes and monster layups on the court during an electrifying day of hoops action. Vithusan Vijayapavan led in scoring with 22 field goals made. 
+      It was raining swishes and monster layups on the court during an electrifying day of hoops action. Vithusan Vijayapavan led in scoring and rebounding with 22 field goals made and 31 boards. 
     
-      Lucksson Nama was a force on the boards, ripping down a league-leading 29 rebounds while also dishing out 9 assists. However, he did have 3 turnovers. 
+      Lucksson Nama was also a force on the boards, ripping down a team-leading 29 rebounds while also dishing out 9 assists. However, he did have 3 turnovers. 
       
       On the defensive side, Kobi g set the tone with 4 steals. When it came to blocks, Vithusan Vijayapavan, Jason Rajasegaram, and Kobi g each had 1. 
       
