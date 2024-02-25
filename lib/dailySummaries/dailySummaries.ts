@@ -41,7 +41,7 @@ type GameDay = {
   const league = "5ac6aaefe8da8276a88ffc07";
   const seasonId = "6508ef50061812df5aaf0b76";
 
-  const dateString = "2/6/2024";
+  const dateString = "2/20/2024";
 
   const stats = await BasketballStat.find({ league })
     .sort("-dateCreated")
@@ -54,7 +54,9 @@ type GameDay = {
         (obj: any) => obj.game.season == seasonId
       );
 
-      var games: any[] = [...new Set(seasonStats.map((a: any) => a.game))];
+      var games: any[] = Array.from(
+        new Set(seasonStats.map((a: any) => a.game))
+      );
 
       var leagueGamesPlayedThisGameDay = games.filter((obj: any) => {
         return obj.dateCreated.toLocaleDateString() == dateString;
@@ -63,9 +65,9 @@ type GameDay = {
         return obj.dateCreated.toLocaleDateString() == dateString;
       });
       var GameDayTotalStats: PlayerTotalStats[] = [];
-      var leaguePlayers = [
-        ...new Set<string>(gameDateLeagueStats.map((a: any) => a.player._id)),
-      ];
+      var leaguePlayers = Array.from(
+        new Set<string>(gameDateLeagueStats.map((a: any) => a.player._id))
+      );
 
       for (var m = 0; m < leaguePlayers.length; m++) {
         var playerStats = gameDateLeagueStats.filter((obj: any) => {
@@ -277,6 +279,21 @@ function createPrompt(gameDay: GameDay): string {
       When it came to winning, Danny Wang, Joel Anthony, Jonathan Kuminga, and Kizaan Alkins led their teams to 6 victories.
     </example>
   
+    <example>
+    It was an action-packed day on the basketball court with impressive performances across the board. 
+    
+    Joel Sebastiampillai stuffed the stat sheet, leading the way on points with 15 field goals made as well as 12 rebounds, 3 assists, and 2 steals. 
+    
+    He was an absolute force on both ends of the court. 
+    
+    Jasinthar Amirthalingam also had a standout game, grabbing the most boards with 27 rebounds while also dishing out a game-high 5 assists and swiping 4 steals. 
+    
+    On the defensive side, Jv Dave, Vithusan Vijayapavan, and Bhavan Sri each registered a block. 
+    
+    When it came to getting the win, Joel Sebastiampillai, Lucksson Nama, Hardip Singh, and Jv Dave led their teams to 7 victories each. 
+    
+    It was a successful day for many players.
+    </example>
   `;
 
   return `
