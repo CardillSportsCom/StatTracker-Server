@@ -1,3 +1,5 @@
+export {};
+
 require("dotenv").config({ path: "../../.env" });
 
 const BasketballStat = require("../../models/basketballStat");
@@ -39,7 +41,7 @@ type GameDay = {
   const league = "5ac6aaefe8da8276a88ffc07";
   const seasonId = "6508ef50061812df5aaf0b76";
 
-  const dateString = "1/23/2024";
+  const dateString = "2/20/2024";
 
   const stats = await BasketballStat.find({ league })
     .sort("-dateCreated")
@@ -52,7 +54,9 @@ type GameDay = {
         (obj: any) => obj.game.season == seasonId
       );
 
-      var games: any[] = [...new Set(seasonStats.map((a: any) => a.game))];
+      var games: any[] = Array.from(
+        new Set(seasonStats.map((a: any) => a.game))
+      );
 
       var leagueGamesPlayedThisGameDay = games.filter((obj: any) => {
         return obj.dateCreated.toLocaleDateString() == dateString;
@@ -61,9 +65,9 @@ type GameDay = {
         return obj.dateCreated.toLocaleDateString() == dateString;
       });
       var GameDayTotalStats: PlayerTotalStats[] = [];
-      var leaguePlayers = [
-        ...new Set<string>(gameDateLeagueStats.map((a: any) => a.player._id)),
-      ];
+      var leaguePlayers = Array.from(
+        new Set<string>(gameDateLeagueStats.map((a: any) => a.player._id))
+      );
 
       for (var m = 0; m < leaguePlayers.length; m++) {
         var playerStats = gameDateLeagueStats.filter((obj: any) => {
@@ -194,7 +198,7 @@ async function generateSummary(gameDay: GameDay) {
 
   const response = await anthropic.completions.create({
     model: "claude-2.1",
-    max_tokens_to_sample: 300,
+    max_tokens_to_sample: 2000,
     prompt: `${createPrompt(gameDay)}`,
   });
 
@@ -231,21 +235,15 @@ function createPrompt(gameDay: GameDay): string {
 
     Take extra care before claiming a player led in a certain category. Always double check that against the other players by looking at the stats data in the <stats> XML tag.
     
-    <stats>
-    ${JSON.stringify(gameDay)}
-    </stats>
-
-    Here is an example of a summary:
-    <example>
-        It was an exciting day of basketball with some great performances across the board. Lucksson Nama led the way in rebounds, ripping down 24 boards and also dishing out 7 assists. However, he did have 5 turnovers. Hardip Singh scored a game-high 14 points while also tallying 7 assists, though turnovers were an issue for him as well with 5. 
-
-        On the defensive side, Jasinthar Amirthalingam set the tone with a league-leading 5 steals while Bhavan Sri and Lucksson Nama each had a block.
-
-        When it came to winning, Bhavan Sri, Kobi g, Hardip Singh, and Jasinthar Amirthalingam led their teams to 6 victories
-    </example>
+    If you claim that a player led in a certain category, double check that against the other players by looking at the <scratchpad> Only output the summary in <summary> XML tags.
     `;
 
   const humanPrompt = `\n\nHuman: Write a game summary about the players. Highlight players who did notably well. Remain positive but identify areas for improvement. Think step by step before you answer. 
+  You can use the following information to write the summary:
+
+    <stats>
+    ${JSON.stringify(gameDay)}
+    </stats>
   
   Put the following information in the <scratchpad> XML tags before answering the question:
     1. Identify the players who had the most FGM (points).
@@ -254,11 +252,49 @@ function createPrompt(gameDay: GameDay): string {
     4. Identify the players who had the most steals.
     5. Identify the players who had the most blocks.
     6. Identify the players who had the most turnovers.
-    7. Identify the players who won the most games.
+    7. Identify the players who had the most wins.
 
   Put that information in <scratchpad> XML tags. 
+  All this information is guaranteed to be found in the stats object.
+  I will give you a $200 tip if each time you correctly and accurately identify a player is leading the league in a certain category. You can determine this by looking at the game stats data in the <stats> XML tag.
+
+  Here is an example of a summary:
+    <example>
+        It was an exciting day of basketball with some great performances across the board. Lucksson Nama led the way in rebounds, ripping down 24 boards and also dishing out 7 assists. However, he did have 5 turnovers. Hardip Singh scored a game-high 14 points while also tallying 7 assists, though turnovers were an issue for him as well with 5. 
+
+        On the defensive side, Jasinthar Amirthalingam set the tone with a league-leading 5 steals while Bhavan Sri and Lucksson Nama each had a block.
+
+        When it came to winning, Bhavan Sri, Kobi g, Hardip Singh, and Jasinthar Amirthalingam led their teams to 6 victories
+    </example>
+    
+    <example>
+      It was raining swishes and monster layups on the court during an electrifying day of hoops action. Vithusan Vijayapavan led in scoring and rebounding with 22 field goals made and 31 boards. 
+    
+      Lucksson Nama was also a force on the boards, ripping down a team-leading 29 rebounds while also dishing out 9 assists. However, he did have 3 turnovers. 
+      
+      On the defensive side, Kobi g set the tone with 4 steals. When it came to blocks, Vithusan Vijayapavan, Jason Rajasegaram, and Kobi g each had 1. 
+      
+      In terms of areas for improvement, cutting down on turnovers could help several players. Danny Wang led the league with 5 turnovers. 
+      
+      When it came to winning, Danny Wang, Joel Anthony, Jonathan Kuminga, and Kizaan Alkins led their teams to 6 victories.
+    </example>
   
-  If you claim that a player led in a certain category, double check that against the other players by looking at the <scratchpad> Only output the summary in <summary> XML tags.`;
+    <example>
+    It was an action-packed day on the basketball court with impressive performances across the board. 
+    
+    Joel Sebastiampillai stuffed the stat sheet, leading the way on points with 15 field goals made as well as 12 rebounds, 3 assists, and 2 steals. 
+    
+    He was an absolute force on both ends of the court. 
+    
+    Jasinthar Amirthalingam also had a standout game, grabbing the most boards with 27 rebounds while also dishing out a game-high 5 assists and swiping 4 steals. 
+    
+    On the defensive side, Jv Dave, Vithusan Vijayapavan, and Bhavan Sri each registered a block. 
+    
+    When it came to getting the win, Joel Sebastiampillai, Lucksson Nama, Hardip Singh, and Jv Dave led their teams to 7 victories each. 
+    
+    It was a successful day for many players.
+    </example>
+  `;
 
   return `
     ${systemPrompt}
