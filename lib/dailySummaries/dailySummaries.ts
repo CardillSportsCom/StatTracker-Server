@@ -4,9 +4,6 @@ require("dotenv").config({ path: "../../.env" });
 
 const BasketballStat = require("../../models/basketballStat");
 const GameDaySummaries = require("../../models/gameDaySummaries");
-const Game = require("../../models/game");
-const Team = require("../../models/team");
-const Player = require("../../models/player");
 
 const Boom = require("boom");
 const db = require("../../src/database").db;
