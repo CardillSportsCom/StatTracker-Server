@@ -1,7 +1,7 @@
 export {};
 
 const BasketballStat = require("../../models/basketballStat");
-const Boom = require("boom");
+const Boom = require('@hapi/boom');
 const mongoose = require("mongoose");
 
 exports.get = (request, h) => {
