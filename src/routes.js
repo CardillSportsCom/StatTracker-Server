@@ -18,6 +18,7 @@ var LoginRoutes = require("../lib/login/routes.js");
 var LogRoutes = require("../lib/log/routes.js");
 var LeagueLeaders = require("../lib/leagueLeaders/routes.js");
 var SeasonRoutes = require("../lib/season/routes.js");
+var VideoHighlights = require("../lib/videoHighlights/routes.js");
 
 module.exports = [].concat(
   LogRoutes,
@@ -38,5 +39,6 @@ module.exports = [].concat(
   LeagueStatRoutes,
   SeasonStatRoutes,
   LeagueLeaders,
-  SeasonRoutes
+  SeasonRoutes,
+  VideoHighlights
 );
