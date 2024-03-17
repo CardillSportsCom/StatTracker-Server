@@ -6,6 +6,7 @@ var VideoHighlightSchema = new Schema({
   storageKey: String,
   player: { type: Schema.Types.ObjectId, ref: "Player" },
   summary: String,
+  thumbnailUrl: String,
 });
 
 module.exports = mongoose.model(
