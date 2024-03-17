@@ -7,6 +7,7 @@ var VideoHighlightSchema = new Schema({
   player: { type: Schema.Types.ObjectId, ref: "Player" },
   summary: String,
   thumbnailUrl: String,
+  likes: [{ type: Schema.Types.ObjectId, ref: "Player" }],
 });
 
 module.exports = mongoose.model(
