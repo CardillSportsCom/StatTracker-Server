@@ -29,7 +29,7 @@ function createVideoHighlights(
   dateString: string,
   dateCreated: string
 ): VideoHighlight {
-  const storageKey = dateString + videoStorageKey;
+  const storageKey = dateString + videoStorageKey.trim();
   const player = new ObjectId(videoStorageKey.split("-")[0]);
   const likes: any[] = [];
 
@@ -54,6 +54,6 @@ function insertVideoHighlights(dateString: string, dateCreated: string): void {
 }
 
 // update these variables each week
-const dateString = "20240402/";
-const dateCreated = new Date("2024-04-02T20:00:00.000Z").toISOString();
+const dateString = "20240416/";
+const dateCreated = new Date("2024-04-16T20:00:00.000Z").toISOString();
 insertVideoHighlights(dateString, dateCreated);
