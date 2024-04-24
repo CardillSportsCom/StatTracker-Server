@@ -58,7 +58,7 @@ const serviceAccount = require("./serviceAccount.json");
 		// Not specifying the host will default to localhost
 
 		// host:'test-cardillsports-stattracker.herokuapp.com'
-		//host: "api-cardillsports-st.herokuapp.com",
+		host: "api-cardillsports-st.herokuapp.com",
 	};
 	const mongoOptions = {
 		promises: "native",
