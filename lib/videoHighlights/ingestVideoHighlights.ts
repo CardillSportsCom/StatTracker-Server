@@ -52,6 +52,6 @@ function insertVideoHighlights(dateString: string, dateCreated: string): void {
 }
 
 // update these variables each week
-const dateString = "20240528/";
-const dateCreated = new Date("2024-05-28T20:00:00.000Z").toISOString();
+const dateString = "20240924/";
+const dateCreated = new Date("2024-09-24T20:00:00.000Z").toISOString();
 insertVideoHighlights(dateString, dateCreated);
