@@ -8,6 +8,7 @@ var LeagueSchema = new Schema({
 	hasThreePoints: Boolean,
 	threePointValue: Number,
 	twoPointValue: Number,
+	hasFouls: Boolean,
 });
 
 module.exports = mongoose.model("League", LeagueSchema);
