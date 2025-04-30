@@ -20,9 +20,9 @@ var BasketBallStatSchema = new Schema({
 	dateCreated: Date,
 	isWin: Boolean,
 	pointsScored: Number,
-	FTM: number,
-	FTA: number,
-	fouls: number,
+	FTM: Number,
+	FTA: Number,
+	fouls: Number,
 });
 
 module.exports = mongoose.model("BasketBallStat", BasketBallStatSchema);
